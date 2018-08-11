@@ -13,6 +13,9 @@ git clone http://luajit.org/git/luajit-2.0.git luajit
 cd luajit
 make && make install
 
+echo 'export LUAJIT_LIB=/usr/local/lib' >> /etc/bashrc
+echo 'export LD_LIBRARY_PATH=$LUAJIT_LIB:$LD_LIBRARY_PATH' >> /etc/bashrc
+
 # Nginx Devel Kit
 cd $DOWNLOAD_DIR
 git clone https://github.com/simplresty/ngx_devel_kit.git nginx_devel_kit
